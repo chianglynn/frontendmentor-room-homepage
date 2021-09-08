@@ -1,0 +1,62 @@
+.btn {
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.slide-btn {
+    display: flex;
+
+    &>* {
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        width           : 5.5rem;
+        height          : 5.5rem;
+        background-color: var(--color-black);
+
+        @include respond-min(medium) {
+            width : 8rem;
+            height: 8rem;
+        }
+
+        &:hover {
+            background-color: var(--color-very-dark-gray);
+        }
+
+        img {
+            width : auto;
+            height: 1.8rem;
+        }
+    }
+}
+
+.shop-btn {
+    display         : flex;
+    align-items     : center;
+    padding         : 0;
+    margin          : 6rem 0 0;
+    background-color: transparent;
+
+    &__link {
+        margin-right  : 2rem;
+        color         : var(--color-black);
+        text-transform: uppercase;
+        letter-spacing: 1.1rem;
+    }
+
+    &__icon {
+        width : 4rem;
+        height: 1.2rem;
+    }
+
+    &:hover &__link {
+        color: var(--color-dark-gray);
+    }
+
+    &:hover &__icon path {
+        fill: var(--color-dark-gray);
+    }
+}

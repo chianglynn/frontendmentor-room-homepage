@@ -1,59 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Room homepage</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Room homepage</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./src/css/main.css">
 </head>
-<body>
-  Home
-  Shop
-  About
-  Contact
 
-  Discover innovative ways to decorate
+<body class="container">
+    <header class="header">
+        <nav class="navigation">
+            <div class="navigation__icon">
+                <img src="./images/icon-hamburger.svg" alt="hamburger icon" class="navigation__icon--hamburger">
+                <img src="./images/icon-close.svg" alt="close icon" class="navigation__icon--close hidden">
+            </div>
 
-  We provide unmatched quality, comfort, and style for property owners across the country. 
-  Our experts combine form and function in bringing your vision to life. Create a room in your 
-  own style with our collection and make your property a reflection of you and what you love.
+            <img src="./images/logo.svg" alt="room logo" class="navigation__logo">
 
-  Shop now
+            <ul class="navigation__list hidden">
+                <li class="navigation__link"><a href="#">home</a></li>
+                <li class="navigation__link"><a href="#">shop</a></li>
+                <li class="navigation__link"><a href="#">about</a></li>
+                <li class="navigation__link"><a href="#">contact</a></li>
+            </ul>
 
-  We are available all across the globe
+            <div class="modal hidden"></div>
+        </nav>
 
-  With stores all over the world, it's easy for you to find furniture for your home or place of business. 
-  Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
-  store locator. Any questions? Don't hesitate to contact us today.
+        <div class="slider">
+            <picture class="slider__pictures--1">
+                <source media="(max-width: 47.99em)" srcset="./images/mobile-image-hero-1.jpg">
+                <source media="(min-width: 48em)" srcset="./images/desktop-image-hero-1.jpg">
+                <img src="./images/desktop-image-hero-1.jpg" alt="hero-1">
+            </picture>
+            <picture class="slider__pictures--2">
+                <source media="(max-width: 47.99em)" srcset="./images/mobile-image-hero-2.jpg">
+                <source media="(min-width: 48em)" srcset="./images/desktop-image-hero-2.jpg">
+                <img src="./images/desktop-image-hero-2.jpg" alt="hero-2">
+            </picture>
+            <picture class="slider__pictures--3">
+                <source media="(max-width: 47.99em)" srcset="./images/mobile-image-hero-3.jpg">
+                <source media="(min-width: 48em)" srcset="./images/desktop-image-hero-3.jpg">
+                <img src="./images/desktop-image-hero-3.jpg" alt="hero-3">
+            </picture>
+        </div>
+    </header>
 
-  Shop now
+    <div class="slide-btn">
+        <button class="slides-btn--left btn">
+            <img src="./images/icon-angle-left.svg" alt="left button">
+        </button>
+        <button class="slides-btn--right btn">
+            <img src="./images/icon-angle-right.svg" alt="right button">
+        </button>
+    </div>
 
-  Manufactured with the best materials
+    <main>
+        <section class="info">
+            <div class="info--1">
+                <h1>Discover innovative ways to decorate</h1>
+                <p>We provide unmatched quality, comfort, and style for property owners across the country.
+                    Our experts combine form and function in bringing your vision to life.Create a room in your own
+                    style with our collection and make your property a reflection of you and what you love.</p>
+                <button type="button" class="shop-btn btn">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="shop-btn__link">shop now</a>
+                    <!-- img tag doesn't work with css fill property -->
+                    <!-- <img src="./images/icon-arrow.svg" alt="arrow icon" class="shop-btn__icon" /> -->
+                    <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg" class="shop-btn__icon">
+                        <path
+                            d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                            fill="#000" fill-rule="nonzero" />
+                    </svg>
+                </button>
+            </div>
+            <div class="info--2">
+                <h1>We are available all across the globe</h1>
+                <p>With stores all over the world, it's easy for you to find furniture for your home or place of
+                    business. Locally, we’re in most major cities throughout the country. Find the branch nearest you
+                    using our store locator. Any questions? Don't hesitate to contact us today.</p>
+                <button type="button" class="shop-btn btn">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="shop-btn__link">shop now</a>
+                    <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg" class="shop-btn__icon">
+                        <path
+                            d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                            fill="#000" fill-rule="nonzero" />
+                    </svg>
+                </button>
+            </div>
+            <div class="info--3">
+                <h1> Manufactured with the best materials</h1>
+                <p>Our modern furniture store provide a high level of quality. Our company has invested in advanced
+                    technology to ensure that every product is made as perfect and as consistent as possible. With three
+                    decades of experience in this industry, we understand what customers want for their home and office.
+                </p>
+                <div class="info__sjop">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="info__shop-link">shop now</a>
+                    <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg" class="shop-btn__icon">
+                        <path
+                            d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                            fill="#000" fill-rule="nonzero" />
+                    </svg>
+                </div>
+            </div>
+        </section>
 
-  Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
-  to ensure that every product is made as perfect and as consistent as possible. With three decades of 
-  experience in this industry, we understand what customers want for their home and office.
+        <section class="about">
+            <div class="about__picture--1">
+                <img src="./images/image-about-dark.jpg" alt="image-about-dark">
+            </div>
+            <div class="about__info">
+                <h2>About our furniture</h2>
+                <p>Our multifunctional collection blends design and function to suit your individual taste. Make each
+                    room unique, or pick a cohesive theme that best express your interests and what inspires you. Find
+                    the furniture pieces you need, from traditional to contemporary styles or anything in between.
+                    Product specialists are available to help you create your dream space.</p>
+            </div>
+            <div class="about__picture--2">
+                <img src="./images/image-about-light.jpg" alt="image-about-light">
+            </div>
+        </section>
+    </main>
 
-  Shop now
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/chianglynn" target="_blank">Lynn Chiang</a>.
+    </div>
 
-  About our furniture
-
-  Our multifunctional collection blends design and function to suit your individual taste.
-  Make each room unique, or pick a cohesive theme that best express your interests and what
-  inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-  or anything in between. Product specialists are available to help you create your dream space.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <script src="./src/js/script.js"></script>
 </body>
+
 </html>
