@@ -67,5 +67,10 @@ img {
 .container {
     display              : grid;
     grid-template-rows   : auto;
-    grid-template-columns: [full-start] minmax(37.5rem, 1fr) [full-end];
+    grid-template-columns: minmax(37.5rem, 1fr);
+
+    @include respond-min(large) {
+        grid-template-rows   : minmax(53.5, 67vh) min-content;
+        grid-template-columns: repeat(8, minmax(10rem, 1fr));
+    }
 }

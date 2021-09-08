@@ -1,6 +1,11 @@
 .attribution {
+    margin-top: 2rem;
     font-size : 11px;
     text-align: center;
+
+    @include respond-min(large) {
+        grid-column: 1 / -1;
+    }
 
     a {
         color: hsl(228, 45%, 44%);
