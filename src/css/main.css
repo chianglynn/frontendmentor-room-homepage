@@ -121,6 +121,7 @@ p {
 
 .btn {
   border: none;
+  cursor: pointer;
 }
 
 .btn:focus {
@@ -187,24 +188,6 @@ p {
   padding: 0;
   margin: 6rem 0 0;
   background-color: transparent;
-}
-
-@media only screen and (min-width: 54em) {
-  .shop-btn {
-    margin: 2.5rem 0 0;
-  }
-}
-
-@media only screen and (min-width: 62em) {
-  .shop-btn {
-    margin: 3.5rem 0 0;
-  }
-}
-
-@media only screen and (min-width: 75em) {
-  .shop-btn {
-    margin: 4rem 0 0;
-  }
 }
 
 .shop-btn__link {
@@ -473,8 +456,8 @@ p {
 .info {
   grid-column: 1 / -1;
   padding: 7.2rem 0;
-  margin: 0 auto;
-  width: 80%;
+  margin: auto;
+  width: 85%;
 }
 
 @media only screen and (min-width: 54em) {
@@ -483,13 +466,17 @@ p {
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
     grid-column: 6 / -1;
-    padding: 5rem 0;
   }
 }
 
 @media only screen and (min-width: 62em) {
   .info {
-    padding: 6rem 0;
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .info {
     width: 70%;
   }
 }

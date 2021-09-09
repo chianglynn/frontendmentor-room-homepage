@@ -1,5 +1,6 @@
 .btn {
     border: none;
+    cursor: pointer;
 
     &:focus {
         outline: none;
@@ -44,18 +45,6 @@
     padding         : 0;
     margin          : 6rem 0 0;
     background-color: transparent;
-
-    @include respond-min(large) {
-        margin: 2.5rem 0 0;
-    }
-
-    @include respond-min(xlarge) {
-        margin: 3.5rem 0 0;
-    }
-
-    @include respond-min(huge) {
-        margin: 4rem 0 0;
-    }
 
     &__link {
         margin-right  : 2rem;
