@@ -27,3 +27,7 @@ function changeSlide(action) {
 [mobileNavOpenIcon, mobileNavCloseIcon].forEach(element => element.addEventListener('click', toggleMobileNav));
 prevSlideButton.addEventListener('click', () => changeSlide('prev'));
 nextSlideButton.addEventListener('click', () => changeSlide('next'));
+window.addEventListener('keydown', (e) => {
+    if (e.keyCode === 37) changeSlide('prev');
+    if (e.keyCode === 39) changeSlide('next');
+});
