@@ -70,7 +70,7 @@ img {
     grid-template-columns: minmax(37.5rem, 1fr);
 
     @include respond-min(large) {
-        grid-template-rows   : minmax(53.5, 67vh) min-content;
+        grid-template-rows   : minmax(min-content, 67vh) min-content;
         grid-template-columns: repeat(8, minmax(10rem, 1fr));
     }
 }

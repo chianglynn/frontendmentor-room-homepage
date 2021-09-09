@@ -18,6 +18,11 @@
         background-color: var(--color-black);
 
         @include respond-min(medium) {
+            width : 6.5rem;
+            height: 6.5rem;
+        }
+
+        @include respond-min(huge) {
             width : 8rem;
             height: 8rem;
         }
@@ -46,6 +51,10 @@
 
     @include respond-min(xlarge) {
         margin: 3.5rem 0 0;
+    }
+
+    @include respond-min(huge) {
+        margin: 4rem 0 0;
     }
 
     &__link {

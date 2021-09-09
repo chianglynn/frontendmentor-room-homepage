@@ -2,7 +2,9 @@
 $breakpoints-max:("medium":"47.99em");
 
 // 768px, 1020px, 1200px
-$breakpoints-min:("medium":"48em", "large":"63.75em", "xlarge":"75em");
+// $breakpoints-min:("medium":"48em", "large":"63.75em", "xlarge":"75em");
+// 768px, 864px, 992px, 1200px
+$breakpoints-min:("medium":"48em", "large":"54em", "xlarge":"62em", "huge":"75em");
 
 @mixin respond-max($size) {
     @media only screen and (max-width: map-get($breakpoints-max, $size)) {
