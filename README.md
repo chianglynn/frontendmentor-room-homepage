@@ -48,8 +48,8 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup with BEM Naming
-- SCSS custom properties
+- Semantic HTML5 markup with responsive images syntax
+- CSS custom properties (SCSS to control scope with BEM naming)
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
